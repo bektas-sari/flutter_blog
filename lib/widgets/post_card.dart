@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+import '../models/post.dart';
+
+class PostCard extends StatelessWidget {
+  final Post post;
+  const PostCard({super.key, required this.post});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: Text(post.title),
+        subtitle: Text(post.excerpt),
+        onTap: () {
+          // Örn: Navigator.pushNamed(context, '/post', arguments: post.slug);
+        },
+      ),
+    );
+  }
+}
